@@ -303,14 +303,14 @@ class JqPlot
         if(strtolower($axis) === 'x' || strtolower($axis) === 'y') {
             $axis = strtolower($axis) . 'axis';
 
-            if ( in_array( $name, array( 'min', 'max', 'numberTicks', 'tickInterval', 'numberTicks' ) ) ) {
-                
+            if ( in_array( $name, array( 'min', 'max', 'numberTicks', 'tickInterval', 'numberTicks' ,'tickRenderer') ) ) {
+
                 $this->setNestedOptVal( $this->options, 'axes', $axis, $name, $value );
-                
-            } elseif( in_array( $name, array( 'showGridline', 'formatString' ) ) ) {
-                
+
+            } elseif( in_array( $name, array( 'showGridline', 'formatString' , 'angle') ) ) {
+
                 $this->setNestedOptVal( $this->options, 'axes', $axis, 'tickOptions', $name, $value );
-                
+
             }
         }
 
